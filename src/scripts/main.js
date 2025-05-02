@@ -85,24 +85,31 @@ function createSpeechBubble(text) {
 }
 
 async function displayMessage() {
-    const input = document.getElementById('message-input').value;
-    if (!input.trim()) return; // Don't display empty messages
+    const input = document.getElementById('message-input');
+    const text = input.value;
+    
+    if (!text.trim()) return; // Don't display empty messages
     
     try {
         const module = await import('../characters/cow.js');
         const character = module.default;
-        const speechBubble = createSpeechBubble(input);
+        const speechBubble = createSpeechBubble(text);
         const display = document.getElementById('ascii-display');
         display.textContent = speechBubble + character;
+        
+        // Clear the input after displaying the message
+        input.value = '';
+        // Reset input height to minimum
+        input.style.height = input.style.minHeight || '50px';
     } catch (error) {
         console.error('Erro ao carregar personagem:', error);
     }
 }
 
-// Event Listeners
+// Event listener for Enter key
 document.getElementById('message-input').addEventListener('keydown', (event) => {
     if (event.key === 'Enter' && !event.shiftKey) {
-        event.preventDefault(); // Prevent new line
+        event.preventDefault();
         displayMessage();
     }
 });
