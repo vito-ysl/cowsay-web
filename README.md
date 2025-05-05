@@ -38,7 +38,7 @@ To run the application locally, follow these steps:
 
 ## Usage
 
-![Cowsay Web Screenshot](screnshot/screenshot.png)
+![Cowsay Web Screenshot](screenshot/screenshot.png)
 ## License
 
 This project is licensed under the MIT License.
