@@ -27,12 +27,18 @@ To run the application locally, follow these steps:
 
 3. Open `index.html` in your web browser.
 
-## Usage
 
 1. Enter your message in the text input field.
 2. Select a character from the dropdown menu.
 3. Click the "Falar!" button to see the ASCII art representation of your message.
 
+1. Enter your message in the text input field.
+2. Select a character from the dropdown menu.
+3. Click the "Falar!" button to see the ASCII art representation of your message.
+
+## Usage
+
+![Cowsay Web Screenshot](screnshot/screenshot.png)
 ## License
 
 This project is licensed under the MIT License.
